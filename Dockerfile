@@ -37,8 +37,8 @@ RUN apk --update add \
         php7-zip \
     && rm -rf /var/cache/apk/*
 RUN set -x \
-	&& addgroup -g 82 -S www-data \
-	&& adduser -u 82 -D -S -G www-data www-data
+	&& addgroup -g 1000 -S www-data \
+	&& adduser -u 1000 -D -S -G www-data www-data
 COPY php.ini /etc/php7/conf.d/50-setting.ini
 COPY php-fpm.conf /etc/php7/php-fpm.conf
 
