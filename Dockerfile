@@ -18,9 +18,12 @@ RUN apk --update add \
         php7-opcache \
         php7-openssl \
         php7-pdo \
+        php7-mysqli \
+        php7-zlib \
         php7-pdo_mysql \
         php7-pdo_pgsql \
         php7-pdo_sqlite \
+        php7-tokenizer \
         php7-phar \
         php7-posix \
         php7-session \
