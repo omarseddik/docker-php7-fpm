@@ -42,5 +42,5 @@ RUN set -x \
 COPY php.ini /etc/php7/conf.d/50-setting.ini
 COPY php-fpm.conf /etc/php7/php-fpm.conf
 COPY ./build.sh /
-ENTRYPOINT /build.sh
 EXPOSE 9000
+RUN ["chmod", "+x", "/build.sh"]
