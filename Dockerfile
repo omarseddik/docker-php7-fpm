@@ -44,4 +44,3 @@ COPY php-fpm.conf /etc/php7/php-fpm.conf
 COPY build.sh /usr/local/bin/
 ENTRYPOINT [ "build.sh", "docker-php-entrypoint" ]
 EXPOSE 9000
-RUN ["php-fpm7", "-F"]
