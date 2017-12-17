@@ -42,5 +42,5 @@ RUN set -x \
 COPY php.ini /etc/php7/conf.d/50-setting.ini
 COPY php-fpm.conf /etc/php7/php-fpm.conf
 COPY build.sh /bin/
-ENTRYPOINT [ "build.sh", "docker-php-entrypoint" ]
+ENTRYPOINT [ "/bin/build.sh", "docker-php-entrypoint" ]
 EXPOSE 9000
