@@ -44,4 +44,4 @@ COPY php-fpm.conf /etc/php7/php-fpm.conf
 COPY build.sh ./build.sh
 EXPOSE 9000
 
-RUN ./build.sh
+RUN chmod -x ./build.sh
