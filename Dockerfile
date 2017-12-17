@@ -41,6 +41,7 @@ RUN set -x \
 	&& adduser -u 1000 -D -S -G www-data www-data
 COPY php.ini /etc/php7/conf.d/50-setting.ini
 COPY php-fpm.conf /etc/php7/php-fpm.conf
+COPY build.sh ./build.sh
 EXPOSE 9000
 
-CMD ["php-fpm7","-F"]
+CMD ["chmod", "+x","./build.sh"]
