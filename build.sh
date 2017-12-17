@@ -1,2 +1,3 @@
 #!/bin/bash
-crond -f
+crond -f &
+php-fpm7 -F
