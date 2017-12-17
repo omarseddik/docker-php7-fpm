@@ -41,6 +41,7 @@ RUN set -x \
 	&& adduser -u 82 -D -S -G www-data www-data
 COPY php.ini /etc/php7/conf.d/50-setting.ini
 COPY php-fpm.conf /etc/php7/php-fpm.conf
-COPY ./build.sh /
+COPY build.sh /usr/local/bin/
+ENTRYPOINT [ "build.sh", "docker-php-entrypoint" ]
 EXPOSE 9000
-RUN ["chmod", "+x", "/build.sh"]
+RUN ["php-fpm7", "-F"]
