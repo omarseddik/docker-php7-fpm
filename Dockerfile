@@ -43,4 +43,4 @@ COPY php.ini /etc/php7/conf.d/50-setting.ini
 COPY php-fpm.conf /etc/php7/php-fpm.conf
 EXPOSE 9000
 
-CMD ["php-fpm7","-F","&&","crond"]
+CMD ["php-fpm7","-F"]
