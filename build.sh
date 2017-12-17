@@ -1,2 +1,3 @@
 #!/bin/bash
-php-fpm7 -F && crond
+cron -f &
+php-fpm7 -F
