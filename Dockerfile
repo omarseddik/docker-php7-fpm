@@ -1,6 +1,7 @@
 FROM alpine:edge
 
 RUN apk --update add \
+        curl \
         php7 \
         php7-bcmath \
         php7-dom \
