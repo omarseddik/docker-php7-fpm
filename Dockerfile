@@ -36,7 +36,10 @@ RUN apk --update add \
         php7-xmlwriter \
         php7-zip \
     && rm -rf /var/cache/apk/*
-    
+
+RUN curl -sS https://getcomposer.org/installer | php \
+        && mv composer.phar /usr/local/bin/ \
+        && ln -s /usr/local/bin/composer.phar /usr/local/bin/composer
 
 COPY php.ini /etc/php7/conf.d/50-setting.ini
 COPY php-fpm.conf /etc/php7/php-fpm.conf
