@@ -1,5 +1,4 @@
 FROM alpine:edge
-
 RUN apk --update add \
         bash \
         curl \
@@ -16,6 +15,7 @@ RUN apk --update add \
         php7-intl \
         php7-json \
         php7-mbstring \
+        php7-exif \
         php7-mcrypt \
         php7-mysqlnd \
         php7-opcache \
